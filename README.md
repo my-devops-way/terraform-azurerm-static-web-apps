@@ -3,6 +3,8 @@ This is an example to create an azure static web app using terraform azurem prov
 
 ** NOTE: THIS IS NOT A MODULE
 
+![aws_s3_cloudfront](https://github.com/my-devops-way/CICD/blob/main/svg/front/azure_static_web_apps.svg?raw=true)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 

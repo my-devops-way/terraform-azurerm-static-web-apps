@@ -10,6 +10,16 @@ variable "domain" {
 }
 variable "location" {
   type        = string
-  default     = "East US 2"
+  default     = "East US"
   description = "The Azure Region where the Static Web App should exist."
+}
+
+variable "connection_string" {
+  type        = string
+  description = "The connection string for the storage account."
+}
+
+variable "containername" {
+  type        = string
+  description = "The name of the container."
 }

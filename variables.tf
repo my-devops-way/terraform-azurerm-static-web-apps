@@ -23,3 +23,13 @@ variable "containername" {
   type        = string
   description = "The name of the container."
 }
+
+variable "resgroupname" {
+  type        = string
+  description = "The name of the resource group."
+}
+
+variable "storageaccountname" {
+  type        = string
+  description = "The name of the storage account."
+}

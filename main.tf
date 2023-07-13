@@ -1,7 +1,18 @@
+terraform {
+  required_providers {
+    azapi = {
+      source  = "Azure/azapi"
+    }
+  }
+}
+
 provider "azurerm" {
   features {}
 }
-
+locals {
+    # get json 
+    json_data = "/frontend/staticwebapp.config.json"
+}
 resource "azurerm_resource_group" "sita-sig-swa-pacfilehost" {
   name     = var.resgroupname
   location = var.location
@@ -13,20 +24,14 @@ resource "azurerm_static_site" "sita-sig-staticsite-pacfilehost" {
   location            = var.location
 }
 
-resource "null_resource" "frontend_files"{
+resource azapi_resource_action appsetting {
+  type = "Microsoft.Web/staticSites/config@2022-03-01"
+  resource_id = "${azurerm_static_site.sita-sig-staticsite-pacfilehost.id}/config/appsettings"
+  method = "PUT"
 
-    depends_on = [data.azurerm_storage_account_blob_container_sas.container_name_sas, 
-                  azurerm_storage_account.pacfilestaticstorage]
-      provisioner "local-exec" {
-      command = <<EOF
-      
-      cd ../frontend      
-      azcopy login 
-      azcopy copy "./frontend" "${data.azurerm_storage_account_blob_container_sas.container_name_sas.connection_string}" --recursive=true
-      
-      EOF
+  body = local.json_data
     }
-}
+  
 
 
 

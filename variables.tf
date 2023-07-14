@@ -19,17 +19,12 @@ variable "connection_string" {
   description = "The connection string for the storage account."
 }
 
-variable "containername" {
-  type        = string
-  description = "The name of the container."
-}
-
 variable "resgroupname" {
   type        = string
   description = "The name of the resource group."
 }
 
-variable "storageaccountname" {
+variable "applocation" {
   type        = string
-  description = "The name of the storage account."
+  description = "The name of the app location."
 }

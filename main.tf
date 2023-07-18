@@ -62,18 +62,15 @@ resource "azapi_update_resource" "appsetting" {
   body = local.json_data
   depends_on = [ azapi_resource.pacfilehostswa ]
 }
-
-# ######################################################################################################################
-# before creating azurerm_static_site_custom_domain resource you have to create a cname record in your domain provider.
-# example: 
-# type  name          value
-# cname my.domain.com azurerm_static_site.example.default_host_name (value)
-# ######################################################################################################################
-
-/**
-  resource "azurerm_static_site_custom_domain" "example" {
-  domain_name     = var.domain
-  static_site_id  = azurerm_static_site.example.id
+  resource "azurerm_static_site_custom_domain" "flexpacfilehostcustomdomain" {
+  domain_name     = "${azurerm_dns_cname_record.flexpacfilehostcname.name}.${azurerm_dns_zone.flexpacfilehostzone.name}"
+  static_site_id  = azapi_resource.pacfilehostswa.id
   validation_type = "cname-delegation"
 }
-*/
+resource "azurerm_dns_cname_record" "flexpacfilehostcname" {
+  name                = var.cname_record
+  zone_name           = var.domain
+  resource_group_name = var.resgroupname
+  ttl                 = 300
+  records             = [azapi_resource.pacfilehostswa.properties.defaultHostname]
+}

@@ -28,3 +28,8 @@ variable "applocation" {
   type        = string
   description = "The name of the app location."
 }
+
+variable "cname_record" {
+  type        = string
+  description = "The name of the cname record."
+}

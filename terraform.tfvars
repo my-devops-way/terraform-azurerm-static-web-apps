@@ -5,3 +5,4 @@ connection_string = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.
 containername = "website"
 resgroupname = "sita-sig-swa-pacfilehost"
 applocation = "/build"
+cname_record = "flexbetapacfilehost"

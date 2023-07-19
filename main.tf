@@ -12,7 +12,7 @@ provider "azurerm" {
 locals {
     # get json 
     json_data = "${file("staticwebapp.config.json")}"
-    pacfile = "${file("pacfile.pac")}"
+    #pacfile = "${file("pacfile.pac")}"
 }
 resource "azurerm_resource_group" "sita-sig-swa-pacfilehost" {
   name     = var.resgroupname
@@ -56,14 +56,19 @@ resource "azapi_resource" "pacfilehostswa" {
   })
 }
 
+output "default_hostname" {
+  value = jsondecode(azapi_resource.pacfilehostswa.output).properties.defaultHostname
+  depends_on = [ azapi_resource.pacfilehostswa ]
+}
+
 resource "azapi_update_resource" "appsetting" {
   type = "Microsoft.Web/staticSites/config@2022-03-01"
   resource_id = "${azapi_resource.pacfilehostswa.id}/config"
   body = local.json_data
   depends_on = [ azapi_resource.pacfilehostswa ]
 }
-  resource "azurerm_static_site_custom_domain" "flexpacfilehostcustomdomain" {
-  domain_name     = "${azurerm_dns_cname_record.flexpacfilehostcname.name}.${azurerm_dns_zone.flexpacfilehostzone.name}"
+resource "azurerm_static_site_custom_domain" "flexpacfilehostcustomdomain" {
+  domain_name     = "${azurerm_dns_cname_record.flexpacfilehostcname.name}.${azurerm_dns_cname_record.flexpacfilehostcname.zone_name}"
   static_site_id  = azapi_resource.pacfilehostswa.id
   validation_type = "cname-delegation"
 }
@@ -72,5 +77,5 @@ resource "azurerm_dns_cname_record" "flexpacfilehostcname" {
   zone_name           = var.domain
   resource_group_name = var.resgroupname
   ttl                 = 300
-  records             = [azapi_resource.pacfilehostswa.properties.defaultHostname]
-}
+  record              = azapi_resource.pacfilehostswa.output
+  }

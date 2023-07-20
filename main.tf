@@ -62,11 +62,13 @@ resource "azapi_update_resource" "appsetting" {
   body = local.json_data
   depends_on = [ azapi_resource.pacfilehostswa ]
 }
+
 resource "azurerm_static_site_custom_domain" "flexpacfilehostcustomdomain" {
   domain_name     = "${azurerm_dns_cname_record.flexpacfilehostcname.name}.${azurerm_dns_cname_record.flexpacfilehostcname.zone_name}"
   static_site_id  = azapi_resource.pacfilehostswa.id
   validation_type = "cname-delegation"
 }
+
 resource "azurerm_dns_cname_record" "flexpacfilehostcname" {
   name                = var.cname_record
   zone_name           = var.domain

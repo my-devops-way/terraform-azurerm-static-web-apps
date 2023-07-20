@@ -56,11 +56,6 @@ resource "azapi_resource" "pacfilehostswa" {
   })
 }
 
-output "default_hostname" {
-  value = jsondecode(azapi_resource.pacfilehostswa.output).properties.defaultHostname
-  depends_on = [ azapi_resource.pacfilehostswa ]
-}
-
 resource "azapi_update_resource" "appsetting" {
   type = "Microsoft.Web/staticSites/config@2022-03-01"
   resource_id = "${azapi_resource.pacfilehostswa.id}/config"

@@ -37,7 +37,7 @@ resource "azapi_resource" "pacfilehostswa" {
         apiBuildCommand = ""
         apiLocation = "/frontend/api"
         appBuildCommand = ""
-        appLocation = "/frontend"
+        appLocation = "/frontend/build"
         outputLocation = "/frontend/pacfile"
         skipGithubActionWorkflowGeneration = true
       }

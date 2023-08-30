@@ -33,3 +33,7 @@ variable "cname_record" {
   type        = string
   description = "The name of the cname record."
 }
+variable "dnsresourcegroup" {
+  type        = string
+  description = "The name of the dns resource group."
+}

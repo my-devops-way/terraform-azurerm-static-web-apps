@@ -73,12 +73,12 @@ resource "azapi_resource" "pacfilehostswa" {
 # You can also use the jsonencode() function to convert a Terraform object
 # to JSON.
 
-resource "azapi_update_resource" "appsetting" {
-  type = "Microsoft.Web/staticSites/config@2022-03-01"
-  resource_id = "${azapi_resource.pacfilehostswa.id}/config"
-  body = local.json_data
-  depends_on = [ azapi_resource.pacfilehostswa ]
-}
+#resource "azapi_update_resource" "appsetting" {
+  #type = "Microsoft.Web/staticSites/config@2022-03-01"
+  #resource_id = "${azapi_resource.pacfilehostswa.id}/config"
+ # body = local.json_data
+ # depends_on = [ azapi_resource.pacfilehostswa ]
+#}
 
 # Create a CNAME record for the FlexPAC File Host
 resource "azurerm_dns_cname_record" "flexpacfilehostcname" {

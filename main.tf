@@ -13,7 +13,7 @@ provider "azurerm" {
 locals {
     # get json 
     json_data = "${file("staticwebapp.config.json")}"
-    pacfile = "${file("pacfile.pac")}"
+   # pacfile = "${file("pacfile.pac")}"
 }
 
 #Create the Resource Group

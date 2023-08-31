@@ -5,6 +5,6 @@ connection_string = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.
 containername = "website"
 resgroupname = "sita-sig-swa-pacfilehost"
 applocation = "/build"
-cname_record = "flexpacfilehost"
+cname_record = "swappflxpacfilehost"
 dnsresourcegroup = "rg-sita-ngp-sig-use-azuredns"
 resgroupid = "/subscriptions/f3e5381e-28a5-4ede-a3c9-6850bac5232f/resourceGroups/sita-sig-swa-pacfilehost"

@@ -1,4 +1,4 @@
-name        ="staticwebapp-flex-signgp-proxypacfilehost"
+name        ="swapp-flx-sig-proxypacfilehost"
 domain      ="signgp.aero"
 location    ="eastus2"
 connection_string = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=sitasigswastorage;AccountKey=xxxxx;Endpoint=sitasigswastorage.blob.core.windows.net"

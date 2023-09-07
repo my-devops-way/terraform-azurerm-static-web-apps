@@ -9,6 +9,7 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = "f3e5381e-28a5-4ede-a3c9-6850bac5232f"
 }
 locals {
     # get json 
@@ -17,7 +18,7 @@ locals {
 }
 
 #Create the Resource Group
-resource "azurerm_resource_group" "sita-sig-swa-pacfilehost" {
+resource "azurerm_resource_group" "pacfile_res_group" {
   name     = var.resgroupname
   location = var.location
   
@@ -34,7 +35,7 @@ resource "azapi_resource" "pacfilehostswa" {
  type = "Microsoft.Web/staticSites@2022-03-01"
   name = var.name
   location = var.location
-  parent_id = var.resgroupid
+  parent_id = azurerm_resource_group.pacfile_res_group.id
   tags = {
     "Project" = "pacfilehostswa"    
     }

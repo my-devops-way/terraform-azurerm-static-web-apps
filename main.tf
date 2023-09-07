@@ -37,7 +37,7 @@ resource "azapi_resource" "pacfilehostswa" {
   location = var.location
   parent_id = azurerm_resource_group.pacfile_res_group.id
   tags = {
-    "Project" = "pacfilehostswa"    
+    "Project" = "sigpacfilehostswa"    
     }
 
    response_export_values = ["*"]

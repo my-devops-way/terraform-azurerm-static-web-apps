@@ -37,7 +37,7 @@ variable "dnsresourcegroup" {
   type        = string
   description = "The name of the dns resource group."
 }
-variable "resgroupid" {
-  type        = string
-  description = "The id of the resource group."
-}
+#variable "resgroupid" {
+#  type        = string
+#  description = "The id of the resource group."
+#}

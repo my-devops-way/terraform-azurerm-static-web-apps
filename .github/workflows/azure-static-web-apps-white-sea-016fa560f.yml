@@ -22,7 +22,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: "9f77e3263f138b1d3f5dacbe35df4f956ed8d9bad881eea872d9e227b7d57dae3-0b33bbaa-35be-402b-992d-c568b989040200f105059"
+          azure_static_web_apps_api_token: "2b03e964f779f815f290a795cd4b748059547d9295f86315d5d8d3d3a57bb29e3-a1c70b06-6861-4b74-88db-e8ed8805150200f105166"
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######

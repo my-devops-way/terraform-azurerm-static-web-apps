@@ -1,7 +1,9 @@
 {
     "trailingSlash": "auto",
         "routes": [
-              {"route": "/pacfiles", "allowedRoles": ["authenticated"]}             
+              {"route": "/pacfiles*",
+               "allowedRoles": ["authenticated"]
+            }             
             ],          
     
     "navigationFallback": {

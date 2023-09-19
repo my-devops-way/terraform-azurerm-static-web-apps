@@ -22,7 +22,7 @@ jobs:
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: "2b03e964f779f815f290a795cd4b748059547d9295f86315d5d8d3d3a57bb29e3-a1c70b06-6861-4b74-88db-e8ed8805150200f105166"
+          azure_static_web_apps_api_token: "3e709542c51e297638c29275a50261ef39a72a0b85ed298967cc1d51ff7a3f533-99eb8210-3b3f-45e7-8b8d-2f69f487c43801e47261"
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
@@ -30,7 +30,7 @@ jobs:
           app_location: "/frontend/build" # App source code path
           api_location: "/frontend/api" # Api source code path - optional
           config_file_location: "/frontend" # Config file location
-          output_location: "/frontend/pacfile" # Built app content directory - optional
+          output_location: "/frontend" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:

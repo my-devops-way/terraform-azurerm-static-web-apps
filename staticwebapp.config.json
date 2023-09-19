@@ -1,30 +1,29 @@
 {
     "trailingSlash": "auto",
         "routes": [
-              {"route": "/YYZ", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},              
-              {"route": "/YYZ/pacfile", "rewrite": "/YYZ.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YKF", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YKF/pacfile", "rewrite": "/YKF.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YUL", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YUL/pacfile", "rewrite": "/YUL.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YYC", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/YYC/pacfile", "rewrite": "/YYC.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/LAX", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/LAX/pacfile", "rewrite": "/LAX.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/SFO", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/SFO/pacfile", "rewrite": "/SFO.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/BHO", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/BHO/pacfile", "rewrite": "/BHO.pac", "statusCode": 200},
-              {"route": "/MAA", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/MAA/pacfile", "rewrite": "/MAA.pac", "statusCode": 200},
-              {"route": "/JFK", "rewrite": "/index.html", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              {"route": "/JFK/pacfile", "rewrite": "/JFK.pac", "statusCode": 200},
-              {"route": "/EWR","rewrite":"/index.html","statusCode" :200,"allowedRoles": ["authenticated"]},
-              {"route": "/EWR/pacfile","rewrite":"/EWR.pac","statusCode" :200}
+              {"route": "/YYZ/yyzpacfile.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
+              
+              {"route": "/YKF/ykfpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/YUL/yulpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/YYC/yycpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/LAX/laxpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/SFO/sfopacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/BHO/bhopacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/MAA/maapacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/JFK/jfkpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
+              
+              {"route": "/EWR/ewrpacfile.pac", "statusCode" :200, "allowedRoles": ["authenticated"]}
             ],          
     
     "navigationFallback": {
-        "rewrite": "/indexindexindex.html",
+        "rewrite": "/index.html",
         "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
     },
     "globalHeaders": {

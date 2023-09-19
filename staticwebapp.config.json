@@ -1,16 +1,7 @@
 {
     "trailingSlash": "auto",
         "routes": [
-              {"route": "/YYZ/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/YKF/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/YUL/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/YYC/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/LAX/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/SFO/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/BHO/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/MAA/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/JFK/pacfile.pac", "allowedRoles": ["authenticated"]},              
-              {"route": "/EWR/pacfile.pac", "allowedRoles": ["authenticated"]}
+              {"route": "/pacfiles", "allowedRoles": ["authenticated"]}             
             ],          
     
     "navigationFallback": {

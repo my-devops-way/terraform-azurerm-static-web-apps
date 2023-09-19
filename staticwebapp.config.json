@@ -1,16 +1,16 @@
 {
     "trailingSlash": "auto",
         "routes": [
-              {"route": "/YYZ/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/YKF/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/YUL/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/YYC/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/LAX/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/SFO/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/BHO/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/MAA/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/JFK/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
-              {"route": "/EWR/pacfile.pac", "statusCode" :200, "allowedRoles": ["authenticated"]}
+              {"route": "/YYZ/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/YKF/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/YUL/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/YYC/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/LAX/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/SFO/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/BHO/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/MAA/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/JFK/pacfile.pac", "allowedRoles": ["authenticated"]},              
+              {"route": "/EWR/pacfile.pac", "allowedRoles": ["authenticated"]}
             ],          
     
     "navigationFallback": {

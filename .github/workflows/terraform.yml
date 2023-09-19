@@ -115,13 +115,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
           
 # Change directory to run Custom Domain configuration, then run plan and apply          
-terraform chdir=frontend/cname
 
-    -name: Terraform Plan
-     run: terraform plan
-     
-    -name: Terraform Apply
-     run: terraform apply
      
      
      

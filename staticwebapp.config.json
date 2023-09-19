@@ -1,25 +1,16 @@
 {
     "trailingSlash": "auto",
         "routes": [
-              {"route": "/YYZ/yyzpacfile.pac", "statusCode": 200,"allowedRoles": ["authenticated"]},
-              
-              {"route": "/YKF/ykfpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/YUL/yulpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/YYC/yycpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/LAX/laxpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/SFO/sfopacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/BHO/bhopacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/MAA/maapacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/JFK/jfkpacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},
-              
-              {"route": "/EWR/ewrpacfile.pac", "statusCode" :200, "allowedRoles": ["authenticated"]}
+              {"route": "/YYZ/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/YKF/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/YUL/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/YYC/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/LAX/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/SFO/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/BHO/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/MAA/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/JFK/pacfile.pac", "statusCode": 200, "allowedRoles": ["authenticated"]},              
+              {"route": "/EWR/pacfile.pac", "statusCode" :200, "allowedRoles": ["authenticated"]}
             ],          
     
     "navigationFallback": {

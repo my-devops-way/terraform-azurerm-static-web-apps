@@ -9,6 +9,7 @@ terraform {
 
 provider "azurerm" {
   features {}
+  subscription_id = "f3e5381e-28a5-4ede-a3c9-6850bac5232f"
 }
 
 locals {
@@ -51,7 +52,7 @@ resource "azapi_resource" "pacfilehostswa" {
         apiLocation = "/frontend/api"
         appBuildCommand = ""
         appLocation = "/frontend/build"
-        outputLocation = "/frontend/pacfile"
+        outputLocation = "/frontend/"        
         skipGithubActionWorkflowGeneration = true
       }
       enterpriseGradeCdnStatus = "Disabled"
